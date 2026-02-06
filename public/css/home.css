@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;   /* ზემოდან ქვემოთ */
+    align-items: center;      /* ჰორიზონტალურად ცენტრში */
+    justify-content: center;  /* ვერტიკალურად ცენტრში */
+    height: 80vh;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.buttons button {
+    margin: 0 10px;   /* ღილაკებს შორის დაშორება */
+    padding: 20px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+}
+
+.register-btn {
+    background-color: cadetblue;
+    color: white;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background-color: lightseagreen;
+}
+
+.login-btn {
+    background-color: chocolate;
+    color: white;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: coral;
+}

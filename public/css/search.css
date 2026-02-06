@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 28px;
+    background: #f6f6f6;
+    margin-top: 15px;
+}
+
+.search-input {
+    font-size: 16px;
+    font-family: 'Lexend', sans-serif;
+    color: #333333;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 500px;
+}
+
+.footballers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+.player-card {
+    background-color: aqua;
+    width: 320px;
+    height: 430px;
+}
+
+.player-card img {
+    width: 300px;
+    height: 300px;
+}
+
+h1 {
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+
+.player-card button {
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(251, 152, 152);
+    color: white;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.player-card button:hover {
+    background-color: rgb(253, 88, 88);
+}
+
+h2 {
+    display: none;
+}

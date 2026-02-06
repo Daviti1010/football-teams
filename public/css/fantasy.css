@@ -1,0 +1,212 @@
+:root {
+    --attack-bg-color: blueviolet;
+    --midfield-bg-color: burlywood;
+    --defence-bg-color: rgb(156, 152, 13);
+    --gk-bg-color: rgb(92, 237, 191);
+}
+
+
+.logout-btn {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.logout-btn button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: darkorchid;
+    color: white;
+    transition: 0.3s;
+}
+
+.logout-btn button:hover {
+    background-color:rgb(189, 50, 249);
+    transform: translateY(-2px);
+}
+
+.positions-container {
+    margin-top: 15px;
+}
+
+.player-card {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.player-card button {
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    gap: 10px;
+    transition: 0.3s ease-in;
+}
+
+.left-wing button,
+.centre-forward button,
+.right-wing button {
+    background-color: var(--attack-bg-color);
+}
+
+.cm1 button,
+.cm2 button,
+.cm3 button {
+    background-color: var(--midfield-bg-color);
+}
+
+.left-back button,
+.left-cb button,
+.right-cb button,
+.right-back button {
+    background-color: var(--defence-bg-color);
+}
+
+.gk button {
+    background-color: var(--gk-bg-color);
+}
+
+.player-card i {
+    font-size: 30px;
+}
+
+.player-card i:hover {
+    color: rgb(155, 155, 155);
+}
+
+.left-wing {
+    background-color: var(--attack-bg-color);
+}
+
+.centre-forward {
+    background-color: var(--attack-bg-color);
+    margin-top: -30px;
+}
+
+.right-wing {
+    background-color: var(--attack-bg-color);
+}
+
+.cm1 {
+    background-color: var(--midfield-bg-color);
+}
+
+.cm2 {
+    background-color: var(--midfield-bg-color);
+}
+
+.cm3 {
+    background-color: var(--midfield-bg-color);
+}
+
+.left-back {
+    background-color: var(--defence-bg-color);
+    margin-top: -25px;
+}
+
+.left-cb {
+    background-color: var(--defence-bg-color);
+}
+
+.right-cb {
+    background-color: var(--defence-bg-color);
+}
+
+.right-back {
+    margin-top: -25px;
+    background-color: var(--defence-bg-color);
+}
+
+.goalkeeper {
+    background-color: var(--gk-bg-color);
+}
+
+.attack {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 70px;
+}
+
+.midfield {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 70px;
+}
+
+.defence {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 50px;
+}
+
+.gk {
+    display: flex;
+    justify-content: center;
+}
+
+.player-card img {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+}
+
+/* ---------- REMOVE BUTTON ---------- */
+
+.remove-btn {
+    display: none;
+}
+
+.left-wing .remove-btn,
+.centre-forward .remove-btn,
+.right-wing .remove-btn,
+.cm1 .remove-btn,
+.cm2 .remove-btn,
+.cm3 .remove-btn,
+.left-back .remove-btn,
+.left-cb .remove-btn,
+.right-cb .remove-btn,
+.right-back .remove-btn,
+.goalkeeper .remove-btn {
+    background: none;
+    border: none;
+    z-index: 10;
+}
+
+.left-wing .remove-btn i,
+.centre-forward .remove-btn i,
+.right-wing .remove-btn i,
+.cm1 .remove-btn i,
+.cm2 .remove-btn i,
+.cm3 .remove-btn i,
+.left-back .remove-btn i,
+.left-cb .remove-btn i,
+.right-cb .remove-btn i,
+.right-back .remove-btn i,
+.goalkeeper .remove-btn i {
+    opacity: 0;
+    transition: 0.1ms;
+}
+
+.left-wing .remove-btn i:hover,
+.centre-forward .remove-btn i:hover,
+.right-wing .remove-btn i:hover,
+.cm1 .remove-btn i:hover,
+.cm2 .remove-btn i:hover,
+.cm3 .remove-btn i:hover,
+.left-back .remove-btn i:hover,
+.left-cb .remove-btn i:hover,
+.right-cb .remove-btn i:hover,
+.right-back .remove-btn i:hover,
+.goalkeeper .remove-btn i:hover {
+    opacity: 1;
+    color: rgb(250, 95, 95);
+}
+

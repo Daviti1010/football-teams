@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Team</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/fantasy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <form action="/logout" method="POST" class="logout-btn">
+        <button>Log Out</button>
+    </form>
+
+    <div class="positions-container">
+
+        <div class="attack">
+            <div class="player-card left-wing">
+                <button class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                <button class="remove-btn"><i class="fa-solid fa-circle-minus"></i></button>
+            </div>
+            <div class="player-card centre-forward">
+                <button class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                <button class="remove-btn"><i class="fa-solid fa-circle-minus"></i></button>
+            </div>
+            <div class="player-card right-wing right-winger">
+                <button class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                <button class="remove-btn"><i class="fa-solid fa-circle-minus"></i></button>
+            </div>
+        </div>
+
+        <div class="midfield">
+            <div class="player-card cm1">
+                <button class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                <button class="remove-btn"><i class="fa-solid fa-circle-minus"></i></button>
+            </div>
+            <div class="player-card cm2">
+                <button class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                <button class="remove-btn"><i class="fa-solid fa-circle-minus"></i></button>
+            </div>
+            <div class="player-card cm3">
+                <button class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                <button class="remove-btn"><i class="fa-solid fa-circle-minus"></i></button>
+            </div>
+        </div>
+
+        <div class="defence">
+            <div class="player-card left-back">
+                <button class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                <button class="remove-btn"><i class="fa-solid fa-circle-minus"></i></button>
+            </div>
+            <div class="player-card left-cb centre-back">
+                <button class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                <button class="remove-btn"><i class="fa-solid fa-circle-minus"></i></button>
+            </div>
+            <div class="player-card right-cb centre-back">
+                <button class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                <button class="remove-btn"><i class="fa-solid fa-circle-minus"></i></button>
+            </div>
+            <div class="player-card right-back">
+                <button class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                <button class="remove-btn"><i class="fa-solid fa-circle-minus"></i></button>
+            </div>
+        </div>
+
+        <div class="gk">
+            <div class="player-card goalkeeper">
+                <button class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
+                <button class="remove-btn"><i class="fa-solid fa-circle-minus"></i></button>
+            </div>  
+        </div>
+    </div>
+    
+    <script type="module" src="/js/fantasy.js"></script>
+</body>
+</html>
