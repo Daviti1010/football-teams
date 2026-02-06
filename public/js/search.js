@@ -1,13 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
-const position = urlParams.get('position'); // "cm2", "left-cb", etc.
+const position = urlParams.get('position');
 
 const footballers = document.querySelector(".footballers");
-// const left_wing = document.querySelector(".left-wing");
-
-
-
-
-
 
 
 
@@ -67,7 +61,7 @@ function displayFootballers(player) {
        btn.addEventListener("click", async function() {
         // Get position from URL parameter
         const urlParams = new URLSearchParams(window.location.search);
-        const position = urlParams.get('position'); // "cm2", "left-cb", etc.
+        const position = urlParams.get('position');
         
         console.log('Adding player to position:', position);
         
@@ -86,7 +80,6 @@ function displayFootballers(player) {
             const data = await response.json();
             
             if (data.success) {
-                // alert(`${player.strPlayer} added to ${position}!`);
                 window.location.href = '/fantasy';
             } else {
                 alert('Failed to add player');

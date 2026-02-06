@@ -58,7 +58,7 @@ function display_player(player) {
 
     let player_position = player.position;
 
-    // working for goalkeeper + centre-forward
+    
     const positionCard = document.querySelector(`.player-card.${player_position.toLowerCase()}`);
 
     // console.log(player_position);
@@ -90,7 +90,7 @@ function buttons(positionCard, player) {
     if (removeBtn) removeBtn.style.display = 'block';
 
     removeBtn.addEventListener("click", async function() {
-        // if (confirm(`Do you want to delete ${player.player_name}?`)) {
+        
         try {
             const response = await fetch(`/remove-player/${player.position}`, {
                 method: 'DELETE'
@@ -113,7 +113,7 @@ function buttons(positionCard, player) {
         } catch (error) {
             console.error('Error:', error);
         }
-    // }
+
     });
     
     console.log(`Displayed ${player.player_name} at ${player.position}`);
