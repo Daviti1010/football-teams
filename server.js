@@ -77,6 +77,10 @@ app.get("/fantasy", requireLogin, (req, res) => {
   res.render("fantasy.ejs");
 });
 
+app.get("/change-password", (req, res) => {
+    res.render("change-password.ejs")
+});
+
 
 app.get("/test", async (req, res) => {
   try {
@@ -130,10 +134,6 @@ app.get("/api-info", async (req, res) => {
 
 
 
-
-
-
-
 app.get(
   "/auth/google",
   passport.authenticate("google", {
@@ -154,8 +154,6 @@ app.get(
     });
   }
 );
-
-
 
 
 app.post("/add-to-team", async (req, res) => {
@@ -321,6 +319,35 @@ app.post("/logout", (req, res) => {
     }
     res.redirect("/login");
   });
+});
+
+app.post("/change-password", async (req, res) => {
+  const email = req.body.email;
+  const new_password = req.body.n_password;
+  const hash = await bcrypt.hash(new_password, salt_rounds);
+
+  try {
+    const checkResult = await db.query("SELECT * FROM user_info WHERE user_email = $1", [
+      email,
+    ]);
+
+    if (checkResult.rows.length === 0) {
+      return res.send("User not found");
+    } else {
+      const result = await db.query(`UPDATE user_info SET user_password = $1 WHERE user_email = $2`, [
+        hash, email
+      ]);
+      console.log("Password Successfully Changed!")
+      // res.redirect("/login");
+    }
+
+    const user = checkResult.rows[0];
+    console.log(user);
+    
+
+  } catch (err) {
+    console.log("Error: " + err);
+  }
 });
 
 
